@@ -44,7 +44,7 @@
   font-family: System-Bold;
   text-anchor: end;
   text-length: 4;
-  x: 90%;
+  x: 90%-2;
   y: 95%;
   fill: pink;
 }
