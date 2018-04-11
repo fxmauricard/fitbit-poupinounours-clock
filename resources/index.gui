@@ -1,0 +1,8 @@
+<svg class="background">
+  <text id="dateLabel" />
+  <text id="timeLabel" />
+  <image class="icon" x="5%" href="stat_steps_solid_24px.png" />
+  <text id="stepLabel" />
+  <image class="icon" x="90%" href="stat_floors_solid_24px.png" />
+  <text id="floorLabel" />
+</svg>
