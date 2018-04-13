@@ -1,8 +1,10 @@
 <svg class="background">
+  <image href="background.jpg" load="sync" opacity="0.90" />
   <image class="battery" href="icons/battery.png" load="sync" />
   <text id="batteryLabel" />  
   <text id="dateLabel" />
   <text id="timeLabel" />
+  <rect x="0" y="85%" width="100%" height="15%+1" fill="black" opacity="0.50" />
   <image class="icon" x="5%" href="icons/stat_steps_solid_24px.png" />
   <text id="stepLabel" />
   <image class="icon" x="90%" href="icons/stat_floors_solid_24px.png" />

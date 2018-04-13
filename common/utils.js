@@ -27,22 +27,17 @@ export function hex2a(hex) {
   return str.toString();
 }
 
-export function goalToColor(value, total, low = 'fb-red', medium = 'fb-peach', high = 'fb-mint', complete = 'fb-cyan', ) {
-  if (!value || !total){
-    color = low;
-    return color;
-  }
-
-  let percent = value / total * 100;
-  let color = 'white'; // #FFFFFF
-  if (percent < 10){
-    color = low; // #F83C40
-  } else if (percent < 25){
-    color = medium; // #FFCC33
-  } else if (percent < 90){
-    color = high;  // #14D3F5
+export function goalToColor(value) {
+  let percent = Math.round(value);
+  let color = 'white';
+  if (percent <= 10) {
+    color = 'fb-red';
+  } else if (percent <= 25) {
+    color = 'fb-peach';
+  } else if (percent <= 90) {
+    color = 'fb-mint';
   } else {
-    color = complete; // #5BE37D
+    color = 'fb-cyan';
   }
   return color
 }
