@@ -26,18 +26,3 @@ export function hex2a(hex) {
   }
   return str.toString();
 }
-
-export function goalToColor(value) {
-  let percent = Math.round(value);
-  let color = 'white';
-  if (percent <= 10) {
-    color = 'fb-red';
-  } else if (percent <= 25) {
-    color = 'fb-peach';
-  } else if (percent <= 90) {
-    color = 'fb-mint';
-  } else {
-    color = 'fb-cyan';
-  }
-  return color
-}
