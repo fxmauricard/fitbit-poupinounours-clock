@@ -2,64 +2,79 @@
   viewport-fill: gold;
 }
 
-.icon {
-  y: 95%-14;
-  height: 15;
-  width: 15;
-  fill: darkgrey;
-}
-
 .battery {
   x: 85%;
   y: 5%;
   height: 15;
   width: 38;
-  fill: grey;
   opacity: 0.75;
 }
 
+#batteryLevel {
+  x: 85%+2;
+  y: 5%+2;
+}
+
 #batteryLabel {
-  font-size: 10;
+  font-size: 20;
+  font-family: SevilleSharp-Book;
   text-length: 4;
   text-anchor: end;
+  fill: pink;
 }
 
 #dateLabel {
-  font-size: 32;
-  font-family: Seville;
+  font-size: 20;
+  font-family: SevilleSharp-Book;
   text-length: 32;
-  text-anchor: middle;
-  x: 50%;
-  y: 25%+20;
+  text-anchor: start;
+  x: 5%;
+  y: 10%+1;
   fill: pink;
 }
 
 #timeLabel {
-  font-size: 80;
+  font-size: 96;
   font-family: System-Regular;
-  text-length: 32;
-  text-anchor: middle;
-  x: 50%;
-  y: 50%+40;
+  text-length: 5;
+  text-anchor: end;
+  x: 71%;
+  y: 50%+25;
   fill: deeppink;
 }
 
-#stepLabel {
-  font-size: 20;
-  font-family: System-Bold;
+#secondsLabel {
+  font-size: 64;
+  font-family: System-Regular;
+  text-length: 3;
   text-anchor: start;
-  text-length: 7;
-  x: 5%+18;
-  y: 95%;
+  x: 71%;
+  y: 50%+25;
+  fill: deeppink;
+}
+
+.activityIcon {
+  y: 94%-23;
+  height: 24;
+  width: 24;
+  fill: darkgrey;
+}
+
+.activityLabel {
+  font-size: 32;
+  font-family: System-Bold;
+  text-length: 6;
+  y: 94%;
+  width: 35%;
   fill: pink;
 }
 
-#floorLabel {
-  font-size: 20;
-  font-family: System-Bold;
+#leftActivityLabel {
+  text-anchor: start;
+  x: 5%+27;
+}
+
+#rightActivityLabel {
   text-anchor: end;
-  text-length: 4;
   x: 90%-2;
-  y: 95%;
-  fill: pink;
 }

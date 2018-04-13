@@ -4,6 +4,7 @@ import * as util from "../common/utils";
 
 // Get a handle on the <text> element.
 const timeLabel = document.getElementById("timeLabel");
+const secondsLabel = document.getElementById("secondsLabel");
 
 export function update(todayDate) {
   let hours = todayDate.getHours();
@@ -19,5 +20,6 @@ export function update(todayDate) {
   let seconds = util.monoDigits(util.zeroPad(todayDate.getSeconds()));
 
   // Update the <text> element with the current time.
-  timeLabel.text = `${hours}:${mins}:${seconds}`;
+  timeLabel.text = `${hours}:${mins}`;
+  secondsLabel.text = `:${seconds}`;
 }
