@@ -29,7 +29,7 @@ const monthLabels =  {
 // Each second
 clock.ontick = (evt) => {
   // Update the <text> element every tick with de battery level
-  batteryLabel.style.fill = util.goalToColor(battery.chargeLevel, 90);
+  batteryLabel.style.fill = util.goalToColor(battery.chargeLevel);
   batteryLabel.text = `${battery.chargeLevel}%`;
 
   let todayDate = evt.date;
