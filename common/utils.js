@@ -26,3 +26,23 @@ export function hex2a(hex) {
   }
   return str.toString();
 }
+
+export function goalToColor(value, total, low = 'fb-red', medium = 'fb-peach', high = 'fb-mint', complete = 'fb-cyan', ) {
+  if (!value || !total){
+    color = low;
+    return color;
+  }
+
+  let percent = value / total * 100;
+  let color = 'white'; // #FFFFFF
+  if (percent < 10){
+    color = low; // #F83C40
+  } else if (percent < 25){
+    color = medium; // #FFCC33
+  } else if (percent < 90){
+    color = high;  // #14D3F5
+  } else {
+    color = complete; // #5BE37D
+  }
+  return color
+}
