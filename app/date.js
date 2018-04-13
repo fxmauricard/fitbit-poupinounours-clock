@@ -7,7 +7,7 @@ const dateLabel = document.getElementById("dateLabel");
 // String consts.
 const dayLabels = {
   'en-us': [ 'Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa' ],
-  'fr-fr': [ 'Di', 'Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa' ],  
+  'fr-fr': [ 'Di', 'Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa' ],
 };
 const monthLabels =  {
   'en-us': [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ],
