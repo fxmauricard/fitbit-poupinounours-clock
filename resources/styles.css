@@ -2,6 +2,13 @@
   viewport-fill: gold;
 }
 
+.icon {
+  y: 95%-14;
+  height: 15;
+  width: 15;
+  fill: darkgrey;
+}
+
 .battery {
   x: 85%;
   y: 5%;
@@ -11,19 +18,10 @@
   opacity: 0.75;
 }
 
-.icon {
-  y: 95%-14;
-  height: 15;
-  width: 15;
-  fill: darkgrey;
-}
-
 #batteryLabel {
   font-size: 10;
   text-length: 4;
   text-anchor: end;
-  x: 94%-2;
-  y: 10%-2;
 }
 
 #dateLabel {
