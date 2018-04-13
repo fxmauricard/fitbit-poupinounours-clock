@@ -1,15 +1,16 @@
 import clock from "clock";
 import document from "document";
+import { battery } from "power";
 import { today } from 'user-activity';
 import { locale } from "user-settings";
 import { preferences } from "user-settings";
-console.log(locale.language);
 import * as util from "../common/utils";
 
 // Update the clock every second
 clock.granularity = "seconds";
 
 // Get a handle on the <text> element
+const batteryLabel = document.getElementById("batteryLabel");
 const dateLabel = document.getElementById("dateLabel");
 const timeLabel = document.getElementById("timeLabel");
 const stepLabel = document.getElementById("stepLabel");
@@ -17,8 +18,8 @@ const floorLabel = document.getElementById("floorLabel");
 
 // String consts
 const dayLabels = {
-  'en-us': [ 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su' ],
-  'fr-fr': [ 'Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa', 'Di' ],  
+  'en-us': [ 'Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa' ],
+  'fr-fr': [ 'Di', 'Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa' ],  
 };
 const monthLabels =  {
   'en-us': [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ],
@@ -27,6 +28,10 @@ const monthLabels =  {
 
 // Each second
 clock.ontick = (evt) => {
+  // Update the <text> element every tick with de battery level
+  batteryLabel.style.fill = util.goalToColor(battery.chargeLevel, 90);
+  batteryLabel.text = `${battery.chargeLevel}%`;
+
   let todayDate = evt.date;
   let hours = todayDate.getHours();
   if (preferences.clockDisplay === "12h") {
