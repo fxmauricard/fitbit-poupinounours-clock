@@ -1,14 +1,18 @@
-<svg class="background">  
+<svg class="background">
   <!-- Background -->
   <image href="background.jpg" load="sync" opacity="0.90" />
-  
+
   <!-- Header bar -->
   <section height="35">
-    <rect width="100%" height="100%" fill="black" opacity="0.50">  
+    <rect class="bar">
       <section x="15" y="25" height="100%-30" width="100%-25">
-        <text width="60%" id="dateLabel" class="headerLabel" />
-        <section x="60%" width="40%">
-          <text id="batteryLabel" x="100%-42" class="headerLabel" />  
+        <text width="50%" id="dateLabel" class="headerLabel" />
+        <section x="50%" width="20%">
+          <image href="icons/stat_hr_solid_24px.png" y="-19" class="activityIcon" fill="red"/>
+          <text id="heartRateLabel" class="headerLabel afterIcon" />
+        </section>
+        <section x="70%" width="30%">
+          <text id="batteryLabel" x="100%-42" class="headerLabel" />
           <image id="batteryIcon" x="100%-38" y="-14" href="icons/battery.png" load="sync">
             <rect id="batteryLevel" x="2" y="2" height="11" />
           </image>
@@ -25,15 +29,15 @@
 
   <!-- Footer bar -->
   <section y="100%-50" height="50">
-    <rect width="100%" height="100%" fill="black" opacity="0.50">
+    <rect class="bar">
       <section x="15" y="15" height="100%-27" width="100%-27">
         <section width="50%">
           <image id="leftActivityIcon" class="activityIcon" />
-          <text id="leftActivityLabel" class="activityLabel" x="27" y="100%-2" pointer-events="visible" />
+          <text id="leftActivityLabel" class="activityLabel afterIcon" pointer-events="visible" />
         </section>
         <section x="50%" width="50%">
           <image id="rightActivityIcon" class="activityIcon" x="100%-24" />
-          <text id="rightActivityLabel" class="activityLabel" x="100%-27" y="100%-2" pointer-events="visible" />
+          <text id="rightActivityLabel" class="activityLabel beforeIcon" pointer-events="visible" />
         </section>
       </section>
     </rect>
