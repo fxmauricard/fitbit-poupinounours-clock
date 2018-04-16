@@ -2,6 +2,13 @@
   viewport-fill: gold;
 }
 
+.bar {
+  width: 100%;
+  height: 100%;
+  fill: black;
+  opacity: 0.50;
+}
+
 .headerLabel {
   y: 100%-5;
   font-size: 20;
@@ -53,6 +60,15 @@
   font-family: System-Bold;
   text-length: 6;
   fill: pink;
+  y: 100%-2;
+}
+
+.afterIcon {
+  x: 27;
+}
+
+.beforeIcon {
+  x: 100%-27;
 }
 
 #leftActivityLabel {
