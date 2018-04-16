@@ -1,3 +1,9 @@
+**Version 2.5.0** - _17/Apr/2018_
+- Added heart rate display in the "header bar".
+- On Fitbit Versa, date year is now displayed with only two digits.
+
+* * *
+
 **Version 2.0.0** - _16/Apr/2018_
 - Adjusted text size to be bigged (better readability).
 - Seconds are now displayed smaller than hours and minutes.
