@@ -9,7 +9,7 @@ const rightActivityIcon = document.getElementById("rightActivityIcon");
 const rightActivityLabel = document.getElementById("rightActivityLabel");
 
 var leftActivity = 'steps';
-var rightActivity = 'elevationGain';
+var rightActivity = 'floors';
 
 leftActivityLabel.onclick = function(e) {
   let temp = rightActivity;
@@ -17,11 +17,7 @@ leftActivityLabel.onclick = function(e) {
   leftActivity = temp;
 }
 
-rightActivityLabel.onclick = function(e) {
-  let temp = rightActivity;
-  rightActivity = leftActivity;
-  leftActivity = temp;
-}
+rightActivityLabel.onclick = leftActivityLabel.onclick;
 
 export function update() {
   // Update the <text> and <image> element with the left activity.
@@ -40,13 +36,12 @@ function updateActivity(position, activity) {
     let label = rightActivityLabel;
   }
 
+  icon.href = `icons/stat_${activity}_solid_24px.png`;
   switch (activity) {
     case 'steps':
-      icon.href = 'icons/stat_steps_solid_24px.png';
       label.text = util.monoDigits(today.adjusted.steps);
       break;
-    case 'elevationGain':
-      icon.href = 'icons/stat_floors_solid_24px.png';
+    case 'floors':
       label.text = util.monoDigits(today.adjusted.elevationGain);
       break;
   }
