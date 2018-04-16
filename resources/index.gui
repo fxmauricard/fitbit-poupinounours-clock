@@ -6,12 +6,12 @@
   <section height="35">
     <rect class="bar">
       <section x="15" y="25" height="100%-30" width="100%-25">
-        <text width="50%" id="dateLabel" class="headerLabel" />
-        <section x="50%" width="20%">
+        <text width="100%-151" id="dateLabel" class="headerLabel" />
+        <section x="100%-151">
           <image href="icons/stat_hr_solid_24px.png" y="-19" class="activityIcon" fill="red"/>
           <text id="heartRateLabel" class="headerLabel afterIcon" />
         </section>
-        <section x="70%" width="30%">
+        <section x="100%-120" width="120">
           <text id="batteryLabel" x="100%-42" class="headerLabel" />
           <image id="batteryIcon" x="100%-38" y="-14" href="icons/battery.png" load="sync">
             <rect id="batteryLevel" x="2" y="2" height="11" />
