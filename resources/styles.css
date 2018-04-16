@@ -33,13 +33,11 @@
 }
 
 #timeLabel {
-  font-size: 96;
   text-length: 5;
   text-anchor: end;
 }
 
 #secondsLabel {
-  font-size: 64;
   text-length: 3;
   text-anchor: start;
 }

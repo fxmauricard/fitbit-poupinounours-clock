@@ -1,6 +1,7 @@
 <svg>
   <defs>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="time.css" />
     <link rel="import" href="/mnt/sysassets/widgets_common.gui" />
   </defs>
 </svg>
