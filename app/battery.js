@@ -8,7 +8,7 @@ const batteryLabel = document.getElementById("batteryLabel");
 
 // Function that get the color for the battery level label based on the current charge level.
 function chargeLevelToColor(value) {
-  let percent = Math.round(value);
+  const percent = Math.round(value);
   let color = 'white';
   if (percent <= 10) {
     color = 'fb-red';

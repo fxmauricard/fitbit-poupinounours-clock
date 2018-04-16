@@ -12,15 +12,13 @@ var leftActivity = 'steps';
 var rightActivity = 'elevationGain';
 
 leftActivityLabel.onclick = function(e) {
-  console.log("left");
-  var temp = rightActivity;
+  let temp = rightActivity;
   rightActivity = leftActivity;
   leftActivity = temp;
 }
 
 rightActivityLabel.onclick = function(e) {
-  console.log("right");
-  var temp = rightActivity;
+  let temp = rightActivity;
   rightActivity = leftActivity;
   leftActivity = temp;
 }
@@ -35,11 +33,11 @@ export function update() {
 
 function updateActivity(position, activity) {
   if (position === 'left') {
-    var icon = leftActivityIcon;    
-    var label = leftActivityLabel;
+    let icon = leftActivityIcon;
+    let label = leftActivityLabel;
   } else if (position === 'right') {
-    var icon = rightActivityIcon;
-    var label = rightActivityLabel;    
+    let icon = rightActivityIcon;
+    let label = rightActivityLabel;
   }
 
   switch (activity) {

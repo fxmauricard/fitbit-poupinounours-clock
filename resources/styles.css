@@ -2,59 +2,49 @@
   viewport-fill: gold;
 }
 
-.battery {
-  x: 85%;
-  y: 5%;
+.headerLabel {
+  y: 100%-5;
+  font-size: 20;
+  font-family: SevilleSharp-Book;
+  fill: pink;  
+}
+
+#dateLabel {
+  text-length: 14;
+  text-anchor: start;
+}
+
+#batteryLabel {
+  text-length: 4;
+  text-anchor: end;
+}
+
+#batteryIcon {
   height: 15;
   width: 38;
   opacity: 0.75;
 }
 
-#batteryLevel {
-  x: 85%+2;
-  y: 5%+2;
-}
-
-#batteryLabel {
-  font-size: 20;
-  font-family: SevilleSharp-Book;
-  text-length: 4;
-  text-anchor: end;
-  fill: pink;
-}
-
-#dateLabel {
-  font-size: 20;
-  font-family: SevilleSharp-Book;
-  text-length: 32;
-  text-anchor: start;
-  x: 5%;
-  y: 10%+1;
-  fill: pink;
+.timeLabel {
+  font-family: System-Regular;
+  fill: deeppink;
+  x: 71%;
+  y: 50%+25;
 }
 
 #timeLabel {
   font-size: 96;
-  font-family: System-Regular;
   text-length: 5;
   text-anchor: end;
-  x: 71%;
-  y: 50%+25;
-  fill: deeppink;
 }
 
 #secondsLabel {
   font-size: 64;
-  font-family: System-Regular;
   text-length: 3;
   text-anchor: start;
-  x: 71%;
-  y: 50%+25;
-  fill: deeppink;
 }
 
 .activityIcon {
-  y: 94%-23;
   height: 24;
   width: 24;
   fill: darkgrey;
@@ -64,17 +54,13 @@
   font-size: 32;
   font-family: System-Bold;
   text-length: 6;
-  y: 94%;
-  width: 35%;
   fill: pink;
 }
 
 #leftActivityLabel {
   text-anchor: start;
-  x: 5%+27;
 }
 
 #rightActivityLabel {
   text-anchor: end;
-  x: 90%-2;
 }

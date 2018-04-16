@@ -16,8 +16,8 @@ export function update(todayDate) {
     hours = util.zeroPad(hours);
   }
   hours = util.monoDigits(hours);
-  let mins = util.monoDigits(util.zeroPad(todayDate.getMinutes()));
-  let seconds = util.monoDigits(util.zeroPad(todayDate.getSeconds()));
+  const mins = util.monoDigits(util.zeroPad(todayDate.getMinutes()));
+  const seconds = util.monoDigits(util.zeroPad(todayDate.getSeconds()));
 
   // Update the <text> element with the current time.
   timeLabel.text = `${hours}:${mins}`;

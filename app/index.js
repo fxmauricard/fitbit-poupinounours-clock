@@ -12,7 +12,7 @@ clock.granularity = "seconds";
 clock.ontick = (evt) => {
   battery.update();
 
-  let todayDate = evt.date;
+  const todayDate = evt.date;
   date.update(todayDate);
   time.update(todayDate);
 

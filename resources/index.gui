@@ -1,15 +1,42 @@
-<svg class="background">
+<svg class="background">  
+  <!-- Background -->
   <image href="background.jpg" load="sync" opacity="0.90" />
-  <rect x="0" y="0" width="100%" height="15%" fill="black" opacity="0.50" />  
-  <text id="dateLabel" />
-  <image class="battery" href="icons/battery.png" load="sync" />
-  <rect id="batteryLevel" width="30" height="11" fill="white" />
-  <text id="batteryLabel" />  
-  <text id="timeLabel" />
-  <text id="secondsLabel" />
-  <rect x="0" y="78%" width="100%" height="22%+1" fill="black" opacity="0.50" />
-  <image id="leftActivityIcon" class="activityIcon" x="5%" />
-  <text id="leftActivityLabel" class="activityLabel" pointer-events="visible" />
-  <image id="rightActivityIcon" class="activityIcon" x="90%" />
-  <text id="rightActivityLabel" class="activityLabel" pointer-events="visible" />
+  
+  <!-- Header bar -->
+  <section height="15%">
+    <rect width="100%" height="100%" fill="black" opacity="0.50">  
+      <section x="15" y="25" height="100%-30" width="100%-25">
+        <text width="50%" id="dateLabel" class="headerLabel" />
+        <section x="50%" width="50%">
+          <text id="batteryLabel" x="100%-42" class="headerLabel" />  
+          <image id="batteryIcon" x="100%-38" y="-12" href="icons/battery.png" load="sync">
+            <rect id="batteryLevel" x="2" y="2" height="11" />
+          </image>
+        </section>
+      </section>
+    </rect>
+  </section>
+
+  <!-- Clock zone -->
+  <section y="15%" height="63%">
+    <text id="timeLabel" class="timeLabel"/>
+    <text id="secondsLabel" class="timeLabel" />
+  </section>
+
+  <!-- Footer bar -->
+  <section y="78%" height="22%">
+    <rect width="100%" height="100%" fill="black" opacity="0.50">
+      <section x="15" y="15" height="100%-30" width="100%-30">
+        <section width="50%">
+          <image id="leftActivityIcon" class="activityIcon" />
+          <text id="leftActivityLabel" class="activityLabel" x="27" y="100%-2" pointer-events="visible" />
+        </section>
+        <section x="50%" width="50%">
+          <image id="rightActivityIcon" class="activityIcon" x="100%-24" />
+          <text id="rightActivityLabel" class="activityLabel" x="100%-27" y="100%-2" pointer-events="visible" />
+        </section>
+      </section>
+    </rect>
+  </section>
+
 </svg>
