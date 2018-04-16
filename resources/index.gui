@@ -6,8 +6,8 @@
   <section height="35">
     <rect width="100%" height="100%" fill="black" opacity="0.50">  
       <section x="15" y="25" height="100%-30" width="100%-25">
-        <text width="50%" id="dateLabel" class="headerLabel" />
-        <section x="50%" width="50%">
+        <text width="60%" id="dateLabel" class="headerLabel" />
+        <section x="60%" width="40%">
           <text id="batteryLabel" x="100%-42" class="headerLabel" />  
           <image id="batteryIcon" x="100%-38" y="-14" href="icons/battery.png" load="sync">
             <rect id="batteryLevel" x="2" y="2" height="11" />
