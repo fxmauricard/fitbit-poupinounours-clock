@@ -1,3 +1,8 @@
+import { me as device } from "device";
+
+// workaround for Fitbit Ionic running Fitbit OS 1.0.
+if (!device.screen) device.screen = { width: 348, height: 250 };
+
 // Add zero in front of numbers < 10
 export function zeroPad(i) {
   if (i < 10) {
@@ -25,4 +30,8 @@ export function hex2a(hex) {
     if (val) str += String.fromCharCode(val);
   }
   return str.toString();
+}
+
+export function getDevice() {
+  return device;
 }

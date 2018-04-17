@@ -1,12 +1,13 @@
 import document from "document";
-import { today } from 'user-activity';
+import { goals, today } from "user-activity";
 import * as util from "../common/utils";
 
-// Get a handle on the <text> element.
+// Get a handle on the <text>, <image> and <rect> elements.
 const leftActivityIcon = document.getElementById("leftActivityIcon");
 const leftActivityLabel = document.getElementById("leftActivityLabel");
 const rightActivityIcon = document.getElementById("rightActivityIcon");
 const rightActivityLabel = document.getElementById("rightActivityLabel");
+const goalBar = document.getElementById("goalBar");
 
 var leftActivity = 'steps';
 var rightActivity = 'floors';
@@ -25,6 +26,10 @@ export function update() {
 
   // Update the <text> and <image> element with the right activity.
   updateActivity('right', rightActivity);
+
+  // Update the <rect> element with the goal progress.
+  const goalPercent = Math.min(100, Math.round(today.adjusted.steps / goals.steps * 100));
+  goalBar.width = Math.round(util.getDevice().screen.width * goalPercent / 100);
 }
 
 function updateActivity(position, activity) {

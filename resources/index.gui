@@ -30,7 +30,7 @@
   <!-- Footer bar -->
   <section y="100%-50" height="50">
     <rect class="bar">
-      <section x="15" y="15" height="100%-27" width="100%-27">
+      <section x="15" y="13" height="100%-27" width="100%-27">
         <section width="50%">
           <image id="leftActivityIcon" class="activityIcon" />
           <text id="leftActivityLabel" class="activityLabel afterIcon" pointer-events="visible" />
@@ -43,4 +43,8 @@
     </rect>
   </section>
 
+  <!-- Goal bar -->
+  <section y="100%-4" height="4">
+      <rect id="goalProgressBar" height="100%" fill="deeppink" />
+  </section>
 </svg>
