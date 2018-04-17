@@ -1,9 +1,6 @@
 import document from "document";
 import { locale } from "user-settings";
-import { me as device } from "device";
-
-// workaround for Fitbit Ionic running Fitbit OS 1.0.
-if (!device.screen) device.screen = { width: 348, height: 250 };
+import * as util from "../common/utils";
 
 // Get a handle on the <text> element.
 const dateLabel = document.getElementById("dateLabel");
@@ -19,8 +16,9 @@ const monthLabels =  {
 };
 
 export function update(todayDate) {
-  // Update the <text> element with the date.
-  const year = (device.screen.width === 348) ? todayDate.getFullYear() : todayDate.getFullYear().toString().substr(-2);
+  const fullYear = todayDate.getFullYear();
+  const year = (util.getDevice().screen.width === 348) ? fullYear : fullYear.toString().substr(-2);
 
+  // Update the <text> element with the date.
   dateLabel.text = (dayLabels[locale.language][todayDate.getDay()] + ' ' + todayDate.getDate() + ' ' + monthLabels[locale.language][todayDate.getMonth()] + ' ' + year).toUpperCase();
 }

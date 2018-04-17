@@ -23,7 +23,7 @@ function chargeLevelToColor(value) {
 }
 
 export function update() {
-  // Update the <text> element with the battery level.
+  // Update the <text> and <rect> element with the battery level.
   batteryLevel.width = Math.round(battery.chargeLevel * 30 / 100);
   batteryLevel.style.fill = chargeLevelToColor(battery.chargeLevel);
   batteryLabel.text = util.monoDigits(battery.chargeLevel) + '%';

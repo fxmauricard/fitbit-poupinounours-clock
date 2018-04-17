@@ -19,7 +19,7 @@ export function update(todayDate) {
   const mins = util.monoDigits(util.zeroPad(todayDate.getMinutes()));
   const seconds = util.monoDigits(util.zeroPad(todayDate.getSeconds()));
 
-  // Update the <text> element with the current time.
+  // Update <text> elements with the current time.
   timeLabel.text = `${hours}:${mins}`;
   secondsLabel.text = `:${seconds}`;
 }
