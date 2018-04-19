@@ -1,3 +1,8 @@
+**Version 2.6.0** - _19/Apr/2018_
+- Added a goal progress bar for the left activity counter.
+
+* * *
+
 **Version 2.5.0** - _17/Apr/2018_
 - Added heart rate display in the "header bar".
 - On Fitbit Versa, date year is now displayed with only two digits.
