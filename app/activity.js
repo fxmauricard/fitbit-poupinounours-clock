@@ -3,22 +3,24 @@ import { goals, today } from "user-activity";
 import * as util from "../common/utils";
 
 // Get a handle on the <text>, <image> and <rect> elements.
-const leftActivityIcon = document.getElementById("leftActivityIcon");
-const leftActivityLabel = document.getElementById("leftActivityLabel");
-const rightActivityIcon = document.getElementById("rightActivityIcon");
-const rightActivityLabel = document.getElementById("rightActivityLabel");
-const goalBar = document.getElementById("goalBar");
+const activityIcons = {
+  left: document.getElementById("leftActivityIcon"),
+  right: document.getElementById("rightActivityIcon"),
+};
+const activityLabels = {
+  left: document.getElementById("leftActivityLabel"),
+  right: document.getElementById("rightActivityLabel"),
+}
+const goalProgressBar = document.getElementById("goalProgressBar");
 
 var leftActivity = 'steps';
-var rightActivity = 'floors';
+var rightActivity = 'elevationGain';
 
-leftActivityLabel.onclick = function(e) {
+activityLabels.left.onclick = activityLabels.right.onclick = function(e) {
   let temp = rightActivity;
   rightActivity = leftActivity;
   leftActivity = temp;
 }
-
-rightActivityLabel.onclick = leftActivityLabel.onclick;
 
 export function update() {
   // Update the <text> and <image> element with the left activity.
@@ -28,26 +30,11 @@ export function update() {
   updateActivity('right', rightActivity);
 
   // Update the <rect> element with the goal progress.
-  const goalPercent = Math.min(100, Math.round(today.adjusted.steps / goals.steps * 100));
-  goalBar.width = Math.round(util.getDevice().screen.width * goalPercent / 100);
+  const goalPercent = Math.min(100, Math.round(today.adjusted[leftActivity] / goals[leftActivity] * 100));
+  goalProgressBar.width = Math.round(util.getDevice().screen.width * goalPercent / 100);
 }
 
 function updateActivity(position, activity) {
-  if (position === 'left') {
-    let icon = leftActivityIcon;
-    let label = leftActivityLabel;
-  } else if (position === 'right') {
-    let icon = rightActivityIcon;
-    let label = rightActivityLabel;
-  }
-
-  icon.href = `icons/stat_${activity}_solid_24px.png`;
-  switch (activity) {
-    case 'steps':
-      label.text = util.monoDigits(today.adjusted.steps);
-      break;
-    case 'floors':
-      label.text = util.monoDigits(today.adjusted.elevationGain);
-      break;
-  }
+  activityIcons[position].href = `icons/stat_${activity}_solid_24px.png`;
+  activityLabels[position].text = util.monoDigits(today.adjusted[activity]);
 }
