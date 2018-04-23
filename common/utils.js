@@ -1,9 +1,9 @@
 import { me as device } from "device";
 
-// workaround for Fitbit Ionic running Fitbit OS 1.0.
+// Workaround for Fitbit Ionic running Fitbit OS 1.0.
 if (!device.screen) device.screen = { width: 348, height: 250 };
 
-// Add zero in front of numbers < 10
+// Add zero in front of numbers < 10.
 export function zeroPad(i) {
   if (i < 10) {
     i = "0" + i;
@@ -11,7 +11,7 @@ export function zeroPad(i) {
   return i;
 }
 
-// Convert a number to a special monospace number
+// Convert a number to a special monospace number.
 export function monoDigits(digits) {
   var ret = "";
   var str = digits.toString();
@@ -22,7 +22,7 @@ export function monoDigits(digits) {
   return ret;
 }
 
-// Hex to string
+// Hex to string.
 export function hex2a(hex) {
   var str = '';
   for (var index = 0; index < hex.length; index += 2) {
@@ -34,4 +34,9 @@ export function hex2a(hex) {
 
 export function getDevice() {
   return device;
+}
+
+// Is the app running on Fitbit Ionic?
+export function isIonic() {
+  return (device.screen.width === 348);
 }
