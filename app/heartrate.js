@@ -10,7 +10,7 @@ const hrm = new HeartRateSensor();
 
 hrm.onreading = function() {
   // Update the <text> element with the current heart rate sensor value.
-  heartRateLabel.text = util.monoDigits(hrm.heartRate);
+  heartRateLabel.text = util.monoDigits(hrm.heartRate || 0);
 
   // Stop monitoring the sensor.
   hrm.stop();
