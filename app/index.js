@@ -11,12 +11,14 @@ clock.granularity = "seconds";
 
 // Each second.
 clock.ontick = (evt) => {
-  heartRate.update();
-  battery.update();
+  if (display.on) {
+    heartRate.update();
+    battery.update();
 
-  const todayDate = evt.date;
-  date.update(todayDate);
-  time.update(todayDate);
+    const todayDate = evt.date;
+    date.update(todayDate);
+    time.update(todayDate);
 
-  activity.update();
+    activity.update();
+  }
 }
