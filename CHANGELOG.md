@@ -10,7 +10,7 @@
 * * *
 
 **Version 2.0.0** - _16/Apr/2018_
-- Adjusted text size to be bigged (better readability).
+- Adjusted text size to be bigger (better readability).
 - Seconds are now displayed smaller than hours and minutes.
 - Moved the date in a newly created "header bar".
 - Battery level icon is now displaying charge level inside it.
