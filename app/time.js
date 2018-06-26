@@ -11,13 +11,10 @@ export function update(todayDate) {
   if (preferences.clockDisplay === "12h") {
     // 12h format.
     hours = hours % 12 || 12;
-  } else {
-    // 24h format.
-    hours = util.zeroPad(hours);
   }
   hours = util.monoDigits(hours);
-  const mins = util.monoDigits(util.zeroPad(todayDate.getMinutes()));
-  const seconds = util.monoDigits(util.zeroPad(todayDate.getSeconds()));
+  const mins = util.monoDigits(todayDate.getMinutes());
+  const seconds = util.monoDigits(todayDate.getSeconds());
 
   // Update <text> elements with the current time.
   timeLabel.text = `${hours}:${mins}`;
