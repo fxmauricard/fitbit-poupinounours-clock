@@ -1,3 +1,8 @@
+**Version 2.6.1** - _12/Jul/2018_
+- Minor optimization and stability fixes.
+
+* * *
+
 **Version 2.6.0** - _19/Apr/2018_
 - Added a goal progress bar for the left activity counter.
 
