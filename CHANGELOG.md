@@ -1,3 +1,10 @@
+**Version 2.7.0** - _03/Jun/2022_
+- Upgraded to Fitbit SDK 4.3.
+- Added Fitbit SDK CLI tools support.
+- Added Fitbit Versa Lite and Fitbit Versa 2 compatibility.
+
+* * * 
+
 **Version 2.6.1** - _12/Jul/2018_
 - Minor optimization and stability fixes.
 
