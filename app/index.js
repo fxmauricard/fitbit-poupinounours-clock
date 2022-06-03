@@ -1,4 +1,5 @@
 import clock from "clock";
+import { display } from "display";
 import * as activity from "./activity.js";
 import * as battery from "./battery.js";
 import * as date from "./date.js";
