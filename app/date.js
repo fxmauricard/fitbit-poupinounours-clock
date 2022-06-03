@@ -17,7 +17,7 @@ const monthLabels =  {
 
 export function update(todayDate) {
   const fullYear = todayDate.getFullYear();
-  const year = (util.isIonic()) ? fullYear : fullYear.toString().substr(-2);
+  const year = fullYear.toString().substr(-2);
 
   // Update the <text> element with the date.
   dateLabel.text = (dayLabels[locale.language][todayDate.getDay()] + ' ' + todayDate.getDate() + ' ' + monthLabels[locale.language][todayDate.getMonth()] + ' ' + year).toUpperCase();

@@ -1,8 +1,3 @@
-import { me as device } from "device";
-
-// Workaround for Fitbit Ionic running Fitbit OS 1.0.
-if (!device.screen) device.screen = { width: 348, height: 250 };
-
 const monospacedChar0 = String.fromCharCode(0x10);
 const monospacedChar1 = String.fromCharCode(0x11);
 const monospacedChar2 = String.fromCharCode(0x12);
@@ -75,13 +70,4 @@ function monoDigit(digit) {
     default:
       return digit;
   }
-}
-
-// Get "device" object with the Fitbit OS 1.0 Workaround applied.
-export function getDevice() {
-  return device;
-}
-// Is the app running on Fitbit Ionic?
-export function isIonic() {
-  return (device.screen.width === 348);
 }

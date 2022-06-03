@@ -1,5 +1,6 @@
 import document from "document";
 import { goals, today } from "user-activity";
+import { me as device } from "device";
 import * as util from "../common/utils";
 
 // Get a handle on the <text>, <image> and <rect> elements.
@@ -31,7 +32,7 @@ export function update() {
 
   // Update the <rect> element with the goal progress.
   const goalPercent = Math.min(100, Math.round(today.adjusted[leftActivity] / goals[leftActivity] * 100));
-  goalProgressBar.width = Math.round(util.getDevice().screen.width * goalPercent / 100);
+  goalProgressBar.width = Math.round(device.screen.width * goalPercent / 100);
 }
 
 function updateActivity(position, activity) {
