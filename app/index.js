@@ -1,10 +1,10 @@
 import clock from "clock";
-import * as activity from "activity";
-import * as battery from "battery";
-import * as date from "date";
-import * as heartRate from "heartrate";
-import * as time from "time";
-import * as util from "../common/utils";
+import * as activity from "./activity.js";
+import * as battery from "./battery.js";
+import * as date from "./date.js";
+import * as heartRate from "./heartrate.js";
+import * as time from "./time.js";
+import * as util from "../common/utils.js";
 
 // Update the clock every second.
 clock.granularity = "seconds";

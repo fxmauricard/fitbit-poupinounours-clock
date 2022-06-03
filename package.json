@@ -21,5 +21,9 @@
         "name": "Horloge de Poupinounours"
       }
     }
+  },
+  "dependencies": {
+    "@fitbit/sdk": "^2.0.4",
+    "@fitbit/sdk-cli": "^1.7.3"
   }
 }
